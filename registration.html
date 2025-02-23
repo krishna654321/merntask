@@ -1,0 +1,54 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>registration page</title>
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+ <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black flex justify-center items-center h-screen">
+	
+  
+		<div class="p-8 items-center  bg-black border-2 border-yellow-500  flex justify-center flex-col   shadow-lg shadow-yellow-500 w-full max-w-sm">
+			<h1 class="font-bold text-3xl  text-center  mb-8  text-white">Registration form </h1>
+			
+	<input  type="username" class="border-1 border text-white w-full  py-2 p-1 rounded-lg" name=""id="username"placeholder="username"><br>
+	<input  type="password" class="border-1 border text-white   rounded-lg p-1 w-full py-2" name=""id="password"placeholder="password"><br>
+	<input  type="city" class="border-1 border bg-black p-1 rounded-lg w-full  py-2   text-white" name=""id="city"placeholder="city"><br>
+	<input  type="Address" class="border-1 border bg-black p-1 rounded-lg w-full py-2    text-white" name=""id="Address
+	"placeholder="Address"><br>
+	
+	<button class=" border  text-black p-1 font-bold px-6 py-2 rounded-lg bg-yellow-300 hover:bg-yellow-400"onclick="setvalue()">register</button>
+	<p class="font-bold mt-3 text-white">Already have an account ?
+		<a class="text-yellow-500"href="login.html">Sign in</a></p>
+		</div>
+	
+	</div>
+
+
+
+
+
+	<script>
+		var arr =  JSON.parse(localStorage.getItem("udata"))??[] 
+		function setvalue(){
+			var uname = document.getElementById('username').value
+		var password = document.getElementById('password').value
+		var city = document.getElementById('city').value
+		obj = {
+			uname:uname.toLowerCase(),
+			password:password.toLowerCase(),
+			city:city.toLowerCase()
+		}
+		arr.push(obj)
+		localStorage.setItem("udata",JSON.stringify(arr))
+
+		}
+
+
+
+
+	</script>
+</body>
+</html>

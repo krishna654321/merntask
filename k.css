@@ -1,0 +1,75 @@
+h1{
+    text-align: center;
+color: rgb(7, 7, 7);
+background-color:black;
+}
+h3{
+    
+    font-size: xx-large;
+}
+p{
+    text-align: center;
+    font-size: 30px;
+}
+.main{
+    display: flex;
+    color: rgb(10, 10, 10);
+}
+.K{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+.k:hover{
+    background-color:white;
+}    
+    
+}
+.a{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+    background-color:white;
+}
+.a:hover{
+    box-shadow: 2px 5px 8px blue;
+    transform: scale(1.2);
+    background-color:black;
+}
+body{
+    background-color: rgb(72, 177, 196);
+}
+#aa{
+    margin-left: 220px;
+     font-family:  Papyrus,Copperplate, fantasy;
+    
+}
+#ab{
+    margin-left: 40px;
+     color:black;
+     font-family: copperplate, Papyrus, fantasy;
+}
+#N:hover{
+    background-color: black;
+
+}
+.b{
+    background-image: linear-gradient( ivory,sandybrown);
+    
+}
+.b:hover{
+
+}
+
+.h{
+    background-color:black;
+}
+#k{
+    background-color:black;
+}
+.p{
+    background-color:black;
+    color:deepskyblue ;
+}

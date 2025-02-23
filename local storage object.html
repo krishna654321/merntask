@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>local storage</title>
+</head>
+<body>
+     <input id="uname" type="text" placeholder="username">
+     <input id="fullname" type="text" placeholder="fullname">
+     <input id="email" type="text" placeholder="email">
+     <input id="city" type="text" placeholder="city">
+     <button onclick="krishna()">click</button>
+     <div id="show"></div>
+     <button onclick="showData()">show</button>
+
+     <script>
+     	function krishna(){
+     		var uname= document.getElementById("uname").value
+               var fullname= document.getElementById("fullname").value
+               var email= document.getElementById("email").value
+               var city= document.getElementById("city").value
+               var student={
+                    uname:uname,
+                    fullname:fullname,
+                    email:email,    
+                    city:city
+               }
+     		localStorage.setItem("student",JSON.stringify(student))
+     	}
+          function showData(){
+          var show = document.getElementById("show")
+          var ajay =   localStorage.getItem("student")
+          let kp=JSON.parse(ajay)
+          show.innerHTML=kp.map((p)=>`<div style="padding:20px; margin:10px; box-shadow:1px 1px 1px gray">
+                <h1>name: ${p.uname}</h1>
+                <h1>fullname: ${p.fullname}</h1>
+                <h1>email: ${p.email}</h1>
+                <h1>city: ${p.city}</h1>
+              </div>`)
+          }
+           
+     </script>
+</body>
+</html>
