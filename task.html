@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>/* Glow Effect */
+        .nav-hover:hover {
+            box-shadow: 0px 4px 15px rgba(0, 0, 255, 0.5);
+        }
+        .nav-link:hover::after {
+    transform: scaleX(1); /* Expand underline */
+    box-shadow: 0px 4px 15px rgba(0, 0, 255, 0.5);
+    transform-origin: left;
+}
+
+       
+        /* Image Hover Animation */
+        .profile-img {
+            transition: border-radius 0.8s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .profile-img:hover {
+            border-radius: 50%;
+            transform: scale(1.1);
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Pulsing Animation for Hero Text */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes borderAnimation {
+    0% { border-image-source: linear-gradient(45deg, #ff0000, #ff7300); } /* Red to Orange */
+    25% { border-image-source: linear-gradient(45deg, #ff7300, #ffff00); } /* Orange to Yellow */
+    50% { border-image-source: linear-gradient(45deg, #ffff00, #00ff00); } /* Yellow to Green */
+    75% { border-image-source: linear-gradient(45deg, #00ff00, #0073ff); } /* Green to Blue */
+    100% { border-image-source: linear-gradient(45deg, #0073ff, #ff00ff); } /* Blue to Pink */
+}
+
+.animated-border {
+    border: 5px solid; /* Border thickness */
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #ff0000, #ff7300);
+    animation: borderAnimation 4s infinite alternate; /* Smooth transition */
+}
+/* Navigation Link Animation */
+.nav-link {
+    position: relative;
+    display: inline-block;
+    text-decoration:none;
+    color: black; /* Default text color */
+    transition: color 0.3s ease-in-out; /* Smooth text color transition */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: blue; /* Underline color */
+    transform: scaleX(0); /* Start hidden */
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: blue; /* Change text color on hover */
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1); /* Expand underline */
+    transform-origin: center;
+}
+
+</style>
+</head>
+<body>
+      
+    <!-- Navbar with Animation -->
+    <nav class="navbar bg-white text-black z-10 sticky top-0 p-5 fade-in transition: bg-color 0.5s ease-in-out, opacity 0.5s ease-in-out">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-black hover:text-indigo-400 transition-all duration-300 hover:scale-105 flex">KrishnaPal Pagare</h1>
+            <ul class="flex space-x-8 text-md">
+    <li><a href="index1.html" class="nav-link">HOME</a></li>
+    <li><a href="about.html" class="nav-link">ABOUT</a></li>
+    <li><a href="Task.html" class="nav-link">TASK</a></li>
+    <li><a href="project.html" class="nav-link">PROJECT</a></li>
+    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+</ul>
+
+        </div>
+    </nav>
+      <!-- Projects Section -->
+    <section id="Task" class="py-16 px-6 bg-black">
+        <h2 class="text-3xl font-semibold text-center text-blue-400 mb-8 ">TASK</h2>
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-black p-6 shadow-lg rounded-lg hover:shadow-md transition-transform transform hover:scale-105 duration-300 hover:bg-black transition duration-300  shadow-sm  shadow-sm hover:shadow-blue-700 rounded-full">
+                <h3 class="text-xl font-semibold text-blue-400 mb-2 hover:text-blue-500">TASK ONE</h3>
+                <a href="pralee.HTML" class="mt-4 inline-block text-blue-400 hover:underline text-center ">PRALEE</a>
+            </div>
+            <div class="bg-black p-6 shadow-lg rounded-lg hover:shadow-md transition-transform transform hover:scale-105 duration-300 hover:bg-black transition duration-300 hover:shadow-blue-700 shadow-sm">
+                <h3 class="text-xl font-semibold text-blue-400 mb-2 ">TASK TWO</h3>
+                <a href="registration.html" class="mt-4 inline-block text-blue-400 hover:underline text-center">REGISTRATION</a>
+            </div>
+            <div class="bg-black p-6 shadow-lg rounded-lg hover:shadow-md transition-transform translate-y hover:scale-105 duration-300 hover:bg-black transition duration-300 hover:shadow-blue-700 shadow-sm">
+                <h3 class="text-xl font-semibold text-blue-400 mb-2 ">TASK THREE</h3>
+                <a href="login.html" class="mt-4 inline-block text-blue-400 hover:underline ">LOGIN</a>
+            </div>
+             <div class="bg-black p-6 shadow-lg rounded-lg hover:shadow-md transition-transform translate-y hover:scale-105 duration-300 hover:bg-black transition duration-300 hover:shadow-blue-700 shadow-sm">
+                <h3 class="text-xl hover:text-blue-500 font-semibold text-blue-400 mb-2 ">TASK FOUR</h3>
+                <a href="k.html" class="mt-4 inline-block text-blue-400 hover:underline ">LAYOUT</a>
+            </div>
+             <div class="bg-black p-6 shadow-lg rounded-lg hover:shadow-md transition-transform translate-y hover:scale-105 duration-300 hover:bg-black transition duration-300 hover:shadow-blue-700 shadow-sm">
+                <h3 class="text-xl font-semibold text-blue-400 mb-2 ">TASK FIVE</h3>
+                <a href="banner.html" class="mt-4 inline-block text-blue-400 hover:underline  ">BANNER</a>
+            </div>
+             <div class="bg-black p-6 shadow-lg rounded-lg hover:shadow-md transition-transform translate-y hover:scale-105 duration-300 hover:bg-black transition duration-300 hover:shadow-blue-700 shadow-sm">
+                <h3 class="text-xl font-semibold text-blue-400 mb-2 hover:text-blue-500  ">TASK SIX</h3>
+                <a href="calculator.html" class="mt-4 inline-block text-blue-400 hover:underline ">CALCULATOR</a>
+            </div>
+             <div class="bg-black p-6 shadow-lg rounded-lg hover:shadow-md transition-transform translate-y hover:scale-105 duration-300 hover:bg-black transition duration-300 hover:shadow-blue-700 shadow-sm hover:">
+                <h3 class="text-xl font-semibold text-blue-400 mb-2 hover:text-blue-500 ">TASK SEVEN</h3>
+                <a href="addque.html" class="mt-4 inline-block text-blue-400 hover:underline hover:text-blue-500 ">ADD QUESTION</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="text-center py-6 bg-black mt-6 text-white">
+        <p>&copy; 2025 KrishnaPal Pagare. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
